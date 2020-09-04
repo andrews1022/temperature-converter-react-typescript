@@ -1,8 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 html {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   font-size: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 *,
@@ -23,7 +40,7 @@ img {
 #root {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1.125rem;
 }
 
 .body {
@@ -45,26 +62,13 @@ img {
 
 .temp__heading {
   font-size: 4rem;
+  font-weight: 400;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-@media only screen and (max-width: 500px) {
-  .temp__heading {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 415px) {
-  .temp__heading {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 365px) {
-  .temp__heading {
-    font-size: 2.25rem;
-  }
+.temp__calc {
+  margin-bottom: 1rem;
 }
 
 .temp__group {
@@ -73,25 +77,13 @@ img {
   justify-content: center;
 }
 
-.temp__group:not(:last-child) {
+.temp__group:not(:last-of-type) {
   margin-bottom: 1.5rem;
 }
 
 .temp__label {
   flex: 0 0 6.5rem;
   font-size: 1.125rem;
-}
-
-@media only screen and (max-width: 415px) {
-  .temp__label {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 365px) {
-  .temp__label {
-    font-size: 0.875rem;
-  }
 }
 
 .temp__wrapper {
@@ -110,20 +102,8 @@ img {
   outline: none;
 }
 
-.temp__input:focus + .temp__span::after {
+.temp__input:focus + ::after {
   width: 100%;
-}
-
-@media only screen and (max-width: 415px) {
-  .temp__input {
-    font-size: 1.25rem;
-  }
-}
-
-@media only screen and (max-width: 365px) {
-  .temp__input {
-    font-size: 1.125rem;
-  }
 }
 
 .temp__span::after {
@@ -148,38 +128,40 @@ img {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 1px;
-  margin: 1.5rem auto 0 auto;
-  padding: 0.5rem 0;
+  margin: 1rem auto 0 auto;
+  padding: 0.625rem 0;
   transition: all 175ms ease-in-out;
   -webkit-tap-highlight-color: transparent;
-  width: 25%;
+  width: 33%;
 }
 
-.temp__btn:hover,
-.temp__btn:active,
-.temp__btn:focus {
+.temp__btn:hover, .temp__btn:active, .temp__btn:focus {
   background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   box-shadow: 0 0.625rem 1rem 0.25rem rgba(0, 0, 0, 0.05);
   outline: none;
   transform: translateY(-2px);
 }
 
-@media only screen and (max-width: 650px) {
-  .temp__btn {
-    width: 50%;
-  }
+.footer {
+  border-top: 2px solid #eee;
+  font-size: 1.125rem;
+  padding-top: 1.625rem;
+  text-align: center;
 }
 
-@media only screen and (max-width: 415px) {
-  .temp__btn {
-    font-size: 1.75rem;
-  }
+.footer__copy {
+  margin-bottom: 0.75rem;
 }
 
-@media only screen and (max-width: 365px) {
-  .temp__btn {
-    font-size: 1.5rem;
-    width: 75%;
-  }
+.footer__link {
+  color: #1b1b1b;
+  font-size: 1.75rem;
+  transition: all 175ms ease-in-out;
 }
+
+.footer__link:hover, .footer__link:active, .footer__link:focus {
+  color: #44d257;
+}
+
 /*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */
