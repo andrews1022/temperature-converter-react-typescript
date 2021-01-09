@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  title: string;
+	title: string;
 }
 
 const Header: React.FC<Props> = ({ title }) => <h1 className='temp__heading'>{title}</h1>;
