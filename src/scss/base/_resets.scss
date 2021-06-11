@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+html {
+	box-sizing: border-box;
+	font-family: $fontLato;
+	font-size: 100%;
+
+	@media #{$desktopSmall} {
+		font-size: 87.5%;
+	}
+
+	@media #{$tabletLandscape} {
+		font-size: 75%;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+input {
+	font-family: $fontLato;
+}
+
+p,
+label,
+button,
+input {
+	font-size: 1.25rem;
+}

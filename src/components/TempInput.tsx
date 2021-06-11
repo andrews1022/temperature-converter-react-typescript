@@ -1,28 +1,26 @@
 import React from 'react';
+import { initialTemps, Actions } from '../reducers/tempReducer';
 
-interface Props {
-	type: string;
-	value: number;
-	convertTemp: (event: React.ChangeEvent<HTMLInputElement>) => void | undefined;
+interface TempInputProps {
+	tempType: string;
+	tempState: any;
+	dispatch: any;
 }
 
-const TempInput: React.FC<Props> = ({ type, value, convertTemp }) => {
-	return (
-		<div className='temp__group'>
-			<label className='temp__label'>{type}</label>
-			<div className='temp__wrapper'>
-				<input
-					className='temp__input'
-					type='number'
-					name={`${type}-input`}
-					id={`${type}-input`}
-					value={value}
-					onChange={convertTemp}
-				/>
-				<span className='temp__span'></span>
-			</div>
-		</div>
-	);
-};
+const TempInput = ({ tempType, tempState, dispatch }: TempInputProps) => (
+	<div className='temp__group'>
+		<label className='temp__label' htmlFor={`temp_${tempType}`}>
+			{tempType}
+		</label>
+		<input
+			className='temp__input'
+			type='number'
+			name={`temp_${tempType}`}
+			id={`temp_${tempType}`}
+			value={tempState[tempType]}
+			onChange={(e) => dispatch({ type: `convert_${tempType}`, payload: e.target.value })}
+		/>
+	</div>
+);
 
 export default TempInput;

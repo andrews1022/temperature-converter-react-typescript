@@ -1,0 +1,32 @@
+// colors
+$whiteSmoke: #f7f7f7;
+$nero: #1b1b1b;
+$witchHaze: #d4fc79;
+$grannySmithApple: #96e6a1;
+$curiousBlue: #349dbd;
+
+// font(s)
+$fontLato: 'Lato', sans-serif;
+
+// general / ui
+$marginCenter: 0 auto;
+$subtleBoxShadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.15);
+$transitionSmoothShort: all 175ms ease-in-out;
+
+// breakpoints
+$desktop4k: 'only screen and (min-width: 3840px)';
+$desktop1440p: 'only screen and (max-width: 2560px)';
+$desktopHD: 'only screen and (max-width: 1920px)';
+$desktopMedium: 'only screen and (max-width: 1680px)';
+$desktopSmall: 'only screen and (max-width: 1440px)';
+$laptop: 'only screen and (max-width: 1366px)';
+$laptopSmall: 'only screen and (max-width: 1280px)';
+$tabletLandscape: 'only screen and (max-width: 1024px)';
+$tabletMedium: 'only screen and (max-width: 900px)';
+$tabletPortrait: 'only screen and (max-width: 768px)';
+$mobileXLarge: 'only screen and (max-width: 640px)';
+$mobileLarge: 'only screen and (max-width: 576px)';
+$mobileMedium: 'only screen and (max-width: 480px)';
+$mobileSmall: 'only screen and (max-width: 415px)';
+$mobileXSmall: 'only screen and (max-width: 375px)';
+$mobileTiny: 'only screen and (max-width: 325px)';

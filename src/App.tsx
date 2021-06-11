@@ -1,15 +1,22 @@
 import React from 'react';
+
+// components
+import Footer from './components/Footer';
 import Header from './components/Header';
 import TempCalc from './components/TempCalc';
-import Footer from './components/Footer';
-import './scss/App.min.css';
+
+// data
+import socialLinks from './data/social-links';
+
+// styles
+import './scss/app.min.css';
 
 const App = () => {
 	return (
-		<div className='temp'>
-			<Header title='temperature converter' />
+		<div className='app'>
+			<Header headingText='Temperature Converter' />
 			<TempCalc />
-			<Footer url='https://github.com/andrews1022/temperature-converter-react-typescript' />
+			<Footer socialLinks={socialLinks} />
 		</div>
 	);
 };

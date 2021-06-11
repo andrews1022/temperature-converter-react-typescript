@@ -1,26 +1,37 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-interface Props {
-	url: string;
+interface FooterProps {
+	socialLinks: string[];
 }
 
-const Footer: React.FC<Props> = ({ url }) => {
-	const generateRandomHeartColor = (): string => {
-		const heartColors: string[] = ['#c382d3', '#349dbd', '#e28255', '#96e6a1'];
-		const randomHeartColor: string = heartColors[Math.floor(Math.random() * heartColors.length)];
-		return randomHeartColor;
-	};
+const Footer = ({ socialLinks }: FooterProps) => {
+	const [gitHubLink, twitterLink] = socialLinks;
 
 	return (
 		<footer className='footer'>
-			<p className='footer__copy'>
-				made with{' '}
-				<i className='footer__heart fas fa-heart' style={{ color: generateRandomHeartColor() }}></i>{' '}
-				by andrew shearer
+			<p className='footer__text'>
+				© {new Date().getFullYear()} all rights reserved. designed and built and andrew shearer
 			</p>
-			<a className='footer__link' href={url} target='_blank' rel='noopener noreferrer'>
-				<i className='footer__github fab fa-github'></i>
-			</a>
+			<div className='footer__icon-row'>
+				<a
+					className='footer__icon-link'
+					href={gitHubLink}
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<FontAwesomeIcon className='footer__icon' icon={faGithub} size='lg' />
+				</a>
+				<a
+					className='footer__icon-link'
+					href={twitterLink}
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<FontAwesomeIcon className='footer__icon' icon={faTwitter} size='lg' />
+				</a>
+			</div>
 		</footer>
 	);
 };

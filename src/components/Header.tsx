@@ -1,9 +1,13 @@
 import React from 'react';
 
-interface Props {
-	title: string;
+interface HeaderProps {
+	headingText: string;
 }
 
-const Header: React.FC<Props> = ({ title }) => <h1 className='temp__heading'>{title}</h1>;
+const Header = ({ headingText }: HeaderProps) => (
+	<header className='header'>
+		<h1 className='header__title'>{headingText}</h1>
+	</header>
+);
 
 export default Header;
