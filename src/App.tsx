@@ -9,7 +9,7 @@ import TempCalc from './components/TempCalc';
 import socialLinks from './data/social-links';
 
 // styles
-import './scss/app.min.css';
+import './scss/index.min.css';
 
 const App = () => {
 	return (
