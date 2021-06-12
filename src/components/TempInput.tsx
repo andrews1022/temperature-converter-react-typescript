@@ -1,5 +1,5 @@
 import React from 'react';
-import { initialTemps, Actions } from '../reducers/tempReducer';
+// import { initialTemps, Actions } from '../reducers/tempReducer';
 
 interface TempInputProps {
 	tempType: string;
