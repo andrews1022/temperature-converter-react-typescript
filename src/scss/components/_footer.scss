@@ -5,7 +5,15 @@
 	// }
 
 	&__icon-row {
-		margin-top: 0.5%;
+		margin-top: 0.75%;
+
+		@media #{$tabletPortrait} {
+			margin-top: 1.5%;
+		}
+
+		@media #{$mobileMedium} {
+			margin-top: 2.25%;
+		}
 	}
 
 	&__icon-link {

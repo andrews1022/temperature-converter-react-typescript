@@ -42,7 +42,19 @@ input {
 }
 
 .footer__icon-row {
-  margin-top: 0.5%;
+  margin-top: 0.75%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__icon-row {
+    margin-top: 1.5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer__icon-row {
+    margin-top: 2.25%;
+  }
 }
 
 .footer__icon-link {
